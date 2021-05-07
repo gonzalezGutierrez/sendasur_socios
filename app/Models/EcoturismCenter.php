@@ -31,15 +31,15 @@ class EcoturismCenter extends Model
     {
         $this->attributes['slug'] = Str::slug($name);
     }
-    
+
     public function findWithSlug($slug)
     {
         return $this->where('slug',$slug)->firstOrFail($this->fields_detail);
     }
 
-    public function findByType($type,$like)
+    public function findByType($type)
     {
-        return $this->getEcotourismCenter($type,$like);
+        return $this->getEcotourismCenter($type);
     }
 
     public function takeByType($type,$take)
@@ -57,19 +57,12 @@ class EcoturismCenter extends Model
 
     }
 
-    public function scopeGetEcotourismCenter($query , $type,$like) 
+    public function scopeGetEcotourismCenter($query , $type)
     {
-        return $query->filter($like)->where('is_active',1)
+        return $query->where('is_active',1)
             ->where('type',$type)
             ->orderBy('id','DESC')
-            ->simplePaginate(10,$this->fields_list);            
-    }
-
-    public function scopeFilter($query , $like) 
-    {
-        return $query->when($like != null , function($query) use($like){
-            return $query->where('name','LIKE','%'.$like.'%');
-        });
+            ->simplePaginate(10,$this->fields_list);
     }
 
 }

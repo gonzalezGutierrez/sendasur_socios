@@ -13,7 +13,7 @@ class EcoturismCentersRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,14 @@ class EcoturismCentersRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name'=>['required'],
+            'slug'=>['required'],
+            'image_url'=>['required'],
+            'description'=>['required'],
+            'description_large'=>['required'],
+            'ubication'=>[''],
+            'activities'=>[''],
+            'services'=>['']
         ];
     }
 }

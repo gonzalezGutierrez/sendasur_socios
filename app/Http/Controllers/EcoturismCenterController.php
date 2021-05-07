@@ -22,29 +22,28 @@ class EcoturismCenterController extends Controller
         return $this->model->findWithSlug($slug);
     }
 
-    private function getType()
+    private function getType($type)
     {
-        return request('type') ? request('type') : 'socio';
+        return  ( $type == 'socio' || $type == 'colaborador' ) ? $type : abort(404);
     }
 
-    private function getLike()
+    private function getTitle($type)
     {
-        return request('like') ? request('like') : null;
+        return ( $type == 'socio' ) ? 'Socios' : 'Colaboradores';
     }
 
     public function index()
     {
-        $type = $this->getType();
-        $like = $this->getLike();
-        
-        $ecotourism_centers =  $this->model->findByType($type,$like);
 
-        return view('admin.ecotourism_centers.index',compact('ecotourism_centers','type','like'));
+        $places =  $this->model->orderBy('id','DESC')->get();
+
+        return view('admin.ecotourism_centers.index',compact('places'));
     }
 
-    public function create($type)
+    public function create()
     {
-        
+        $place = $this->model;
+        return view('admin.ecotourism_centers.create',compact('place'));
     }
 
     public function edit($slug,$type)
@@ -57,8 +56,9 @@ class EcoturismCenterController extends Controller
         return $this->model = $this->findResource($slug);
     }
 
-    public function store(EcoturismCentersRequest  $request,$type)
+    public function store(EcoturismCentersRequest  $request)
     {
+
 
         $this->model->name              = $request->name;
         $this->model->slug              = $request->name;
@@ -67,11 +67,11 @@ class EcoturismCenterController extends Controller
         $this->model->description_large = $request->description_large;
         $this->model->ubication         = $request->ubication;
         $this->model->is_active         = $request->is_active;
-        $this->model->type              = $type;
+        $this->model->type              = $request->type;
 
         $this->model->save();
 
-        return redirect("secure/{$type}")->with('status_success','Centro ecoturistico fue almacenado correctamente');
+        return redirect("admin/centros_ecoturisticos")->with('status_success','El centro ecoturistico fue almacenado correctamente');
 
     }
 
@@ -99,7 +99,7 @@ class EcoturismCenterController extends Controller
         $this->model = $this->findResource($slug);
 
         $this->model->is_active = 0;
-        
+
         $this->model->save();
 
         return redirect("secure/{$type}")->with('status_success','Centro ecoturistico fue actualizado correctamente');

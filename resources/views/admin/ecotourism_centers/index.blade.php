@@ -1,103 +1,66 @@
 @extends('layouts.admin_lite')
 
-@section('content')
+@section('title','Centros ecoturisticos')
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <form action="{{asset('admin/centros_ecoturisticos')}}">
-                    <input type="hidden" name="type"  value="{{$type}}">
-                    <div class="input-group input-group-lg box-gray">
-                        <input type="text" name="like" value="{{$like}}" placeholder="Buscar {{$type}}..." class="form-control form-control-lg " aria-label="Text input with dropdown button">
-                        <div class="input-group-append">
-                            <button class="btn btn-default btn-md m-0 px-3 py-2 z-depth-0 waves-effect waves-light" type="submit">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
+@section('header_section')
+<div class="row page-titles">
+    <div class="col-md-5 align-self-center">
+
+    </div>
+    <div class="col-md-7 align-self-center">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Inicio</a></li>
+            <li class="breadcrumb-item active">Centros ecoturisticos</li>
+        </ol>
+    </div>
+    <div>
+        <button class="right-side-toggle waves-effect waves-light btn-inverse btn btn-circle btn-sm pull-right m-l-10"><i class="ti-settings text-white"></i></button>
+    </div>
+</div>
+@stop
+
+
+@section('content')
+    <div class="row">
+        <div class="col-12">
+            {{--@include('elements.notifications')--}}
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="card-title">Centros ecoturisticos</h4>
+                        <a href="{{asset('admin/centros_ecoturisticos/create')}}" class="btn btn-outline-primary btn-sm"><i class="fa fa-plus-circle"></i> Agregar</a>
                     </div>
-                </form>
-            </div>
-            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
-                <div class="box-gray text-center">
-                    <a href="#" class="btn btn-default waves-effect waves-light">
-                        <i class="fas fa-plus-circle"></i>
-                        Nuevo
-                    </a>
+                    <div class="table-responsive m-t-40">
+                        <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                            <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Tipo</th>
+                                <th class="no-print">Acciones</th>
+                            </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Tipo</th>
+                                    <th class="no-print">Acciones</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                @foreach($places as $place)
+                                    <tr>
+                                        <td>{{$place->name}}</td>
+                                        <td>{{$place->type}}</td>
+                                        <td class="no-print">
+
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="space-50"></div>
-        <div class="row">
-            <div class="col-md-12 mb-5 card card-body">
-                <table class="table  table-striped">
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Tipo</th>
-                            <th>Estatus</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($ecotourism_centers as $center)
-                            <tr>
-                                <td>{{$center->name}}</td>
-                                <td class="">
-                                    <span class="badge badge-primary">
-                                        <i class="fas fa-check"></i>
-                                        {{$center->type}}
-                                    </span>
-                                </td>
-                                <td>
-                                    @if($center->is_active == 1)
-                                        <span class="badge badge-primary">
-                                            <i class="fas fa-check"></i>
-                                            Activo
-                                        </span>
-                                    @endif 
-
-                                    @if($center->is_active == 2)
-                                        <span class="badge badge-warning">
-                                            <i class="fas fa-trash"></i>
-                                            Inactivo
-                                        </span>
-                                    @endif 
-                                </td>
-                                <td>
-                                    <a target="_blank" href="{{asset('/').$center->type.'/detalle/'.$center->slug}}" class="btn btn-sm btn-outline-primary">
-                                        <i class="fas fa-chevron-circle-right"></i>
-                                    </a>
-                                    <a href="#" data-toggle="modal" data-target="#open_model_{{$type}}_{{$center->slug}}" class="btn btn-sm btn-outline-info">
-                                        <i class="fas fa-images"></i>
-                                    </a>
-
-                                    <a href="{{asset('admin/centros_ecoturisticos/'.$center->slug.'/edit')}}" class="btn btn-sm btn-outline-info">
-                                        <i class="fas fa-edit"></i>
-                                    </a>
-
-                                   <!-- Modal -->
-                                   <div class="modal fade" id="open_model_{{$type}}_{{$center->slug}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    {{$center->name}}
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <img src="{{$center->image_url}}" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-
-                {{$ecotourism_centers->appends(['type'=>$type])->links()}}
-            </div>
-        </div>
     </div>
-
 @stop

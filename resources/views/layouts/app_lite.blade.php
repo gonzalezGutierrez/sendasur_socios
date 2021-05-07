@@ -6,12 +6,12 @@
 	<meta name="description" content="Unica University Template">
 	<meta name="keywords" content="event, unica, creative, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Favicon -->   
+	<!-- Favicon -->
 	<link href="img/favicon.ico" rel="shortcut icon"/>
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i" rel="stylesheet">
-	
+
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="{{asset('web/css/bootstrap.min.css')}}"/>
 	<link rel="stylesheet" href="{{asset('web/css/font-awesome.min.css')}}"/>
@@ -21,7 +21,23 @@
 	<link rel="stylesheet" href="{{asset('web/css/owl.carousel.css')}}"/>
 	<link rel="stylesheet" href="{{asset('web/css/style.css')}}"/>
 
-    
+    <style>
+        input[type='date'] , input[type='number']{
+            width: 100%;
+            border: 1px solid #cccccc;
+            font-size: 14px;
+            padding: 18px 20px;
+            margin-bottom: 30px;
+            border-radius: 2px;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .site-breadcrumb {
+                padding: 20px 10px !important;
+            }
+        }
+    </style>
+
 
 
 	<!--[if lt IE 9]>
@@ -39,9 +55,8 @@
 
     <!-- header section -->
     <header class="header-section">
-        <div class="container">
-            <!-- logo -->
-            <a href="index.html" class="site-logo"><img src="{{asset('web/img/logo.png')}}" alt=""></a>
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="{{asset('/')}}" class="site-logo"><img src="{{asset('logo.png')}}" width="290px" height="80px" alt=""></a>
             <div class="nav-switch">
                 <i class="fa fa-bars"></i>
             </div>
@@ -63,20 +78,20 @@
     <!-- Header section  -->
     <nav class="nav-section">
         <div class="container">
-            
+
             <ul class="main-menu">
-                <li class="active"><a href="{{asset('/')}}">Inicio</a></li>
-                <li><a href="{{asset('/acerca-de')}}">Acerca de</a></li>
+                <li class="{{request()->is('/') ? 'active' : ''}}"><a href="{{asset('/')}}">Inicio</a></li>
+                <li class="{{request()->is('nosotros') ? 'active' : ''}}"><a href="{{asset('nosotros')}}">Acerca de</a></li>
                 <li><a href="{{asset('/servicios')}}">Servicios</a></li>
-                <li><a href="{{asset('/')}}">Centros ecoturisticos</a></li>
-                <li><a href="{{asset('socios')}}">Socios</a></li>
-                <li><a href="contact.html">Contacto</a></li>
+                <li class="{{request()->is('centros_ecoturisticos') ? 'active' : ''}}"><a href="{{asset('/centros_ecoturisticos')}}">Centros ecoturísticos</a></li>
+                <li class="{{request()->is('socios') ? 'active' : ''}}"><a href="{{asset('socios')}}">Socios</a></li>
+                <li class="{{request()->is('contacto') ? 'active' : ''}}"><a href="{{asset('contacto')}}">Contacto</a></li>
             </ul>
         </div>
     </nav>
 
     @yield('content')
-  
+
 
 
     {{-- <!-- Hero section -->
@@ -209,7 +224,7 @@
     </section>
     <!-- Services section end -->
 
-    
+
     <!-- Enroll section -->
     <section class="enroll-section spad set-bg" data-setbg="{{asset('web/img/enroll-bg.jpg')}}">
         <div class="container">
@@ -619,13 +634,13 @@
         <!-- copyright -->
         <div class="copyright">
             <div class="container">
-                
-            </div>		
+
+            </div>
         </div>
     </footer>
-	
 
-	
+
+
 	<!-- Footer section end-->
 
 
@@ -639,6 +654,6 @@
 	<script src="{{asset('web/js/main.js')}}"></script>
 
     <script src="{{ asset('js/app.js') }}" defer></script>
-	
+
 </body>
 </html>

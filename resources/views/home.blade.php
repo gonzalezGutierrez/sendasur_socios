@@ -156,12 +156,12 @@
                 <p>
                     Estamos integrados por organizaciones
                     indígenas consolidadas, que trabaja en función del desarrollo local y familiar ,
-                    como una forma de aumentar y diversificar nuestros recursos económicos, con el fin de generar desarrollo y un alto 
+                    como una forma de aumentar y diversificar nuestros recursos económicos, con el fin de generar desarrollo y un alto
                     impacto social en nuestra región.
                 </p>
             </div>
             <div class="row">
-                
+
                 @foreach($partners as $partner)
 
                     <div class="col-lg-4 col-md-6 course-item">
@@ -174,12 +174,12 @@
                         <div class="course-info">
                             <div class="date"><i class="fa fa-clock-o"></i> 22 Mar 2018</div>
                             <h4>{{$partner->name}}</h4>
-                            
+
                         </div>
                     </div>
 
                 @endforeach
-                
+
             </div>
         </div>
     </section>
@@ -242,17 +242,17 @@
                         <div class="event-thumb">
                             <img src="{{$center->image_url}}" alt="">
                             <div class="event-date">
-                                <span>Colaborador</span>
+                                <a href="{{asset('lugar/'.$center->slug)}}">
+                                    <span> <i class="fa fa-book"></i> Reservar</span>
+                                </a>
                             </div>
                         </div>
                         <div class="event-info">
                             <h4>{{$center->name}}</h4>
-                            <p> <i class="fa fa-map-marker"></i> Center Building, Block A</p>
-                            <a href="" class="event-readmore">Reservar <i class="fa fa-angle-double-right"></i></a>
                         </div>
                     </div>
                 @endforeach
-                
+
             </div>
         </div>
     </section>
