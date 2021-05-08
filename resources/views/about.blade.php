@@ -19,7 +19,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-6 about-text">
-                    <h5>¿Quienes Somos?</h5>
+                    <h5>¿Quiénes Somos?</h5>
 
                     <p class="text-justify">
                         SendaSur es una red de turismo comunitario del estado de Chiapas, integrada por organizaciones
@@ -82,11 +82,22 @@
                         <li class="text-justify"><i class="fa fa-check-square-o"></i> Promover el desarrollo del turismo en las comunidades, generando beneficios económicos para mejorar la calidad de vida de sus habitantes.</li>
                     </ul>
 
+                    <h5 class="pt-4">Valores</h5>
+
+                    <ul class="about-list">
+                        <li class="text-justify"><i class="fa fa-check-square-o"></i> Honestidad: Ser justos con los precios para nuestros clientes y los pagos a nuestros proveedores.</li>
+                        <li class="text-justify"><i class="fa fa-check-square-o"></i> Sostenibilidad: Promover un turismo que no degrade el medio ambiente y promueva el beneficio de comunidades receptoras.</li>
+                        <li class="text-justify"><i class="fa fa-check-square-o"></i> Calidad: Cumplir con lo que prometemos, atender las demandas y solicitudes de nuestros clientes en tiempo y forma.</li>
+                        <li class="text-justify"><i class="fa fa-check-square-o"></i> Transparencia: Comunicar nuestras acciones en la implementación de programas de turismo sostenible con veracidad.</li>
+                        <li class="text-justify"><i class="fa fa-check-square-o"></i> Trabajo en equipo: Buscar siempre un espacio donde todo el equipo pueda expresar sus ideas y se creen estrategias para fomentar un buen ambiente de trabajo.</li>
+                    </ul>
+
                 </div>
                 <div class="col-lg-6 pt-5 pt-lg-0">
                     <img class="mt-5" src="{{asset('web/img/about.jpg')}}" alt="">
-                    <img class="mt-5" src="{{asset('web/img/about.jpg')}}" alt="">
-                    <img class="mt-5" src="{{asset('web/img/about.jpg')}}" alt="">
+                    <img class="mt-5" src="{{asset('web/img/about2.png')}}" alt="">
+                    <img class="mt-5" src="{{asset('web/img/about3.jpg')}}" alt="">
+                    <img class="mt-5" src="{{asset('web/img/about4.jpg')}}" alt="">
                 </div>
             </div>
         </div>

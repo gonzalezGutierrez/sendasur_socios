@@ -67,6 +67,8 @@ class EcoturismCenterController extends Controller
         $this->model->description_large = $request->description_large;
         $this->model->ubication         = $request->ubication;
         $this->model->is_active         = $request->is_active;
+        $this->model->services          = $request->services;
+        $this->model->activities        = $request->activities;
         $this->model->type              = $request->type;
 
         $this->model->save();
@@ -87,11 +89,14 @@ class EcoturismCenterController extends Controller
         $this->model->description_large = $request->description_large;
         $this->model->ubication         = $request->ubication;
         $this->model->is_active         = $request->is_active;
-        $this->model->type              = $type;
+        $this->model->services          = $request->services;
+        $this->model->activities        = $request->activities;
+        $this->model->type              = $request->type;
 
         $this->model->save();
 
         return redirect("secure/{$type}")->with('status_success','Centro ecoturistico fue actualizado correctamente');
+    
     }
 
     public function destroy($slug,$type)
