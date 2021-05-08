@@ -31,7 +31,7 @@
         @enderror
     </div>
 
-    <img src="{{asset('admin/assets/images/add-image.png')}}" id="preview_url" class="mb-4" style="height:300px; border-radius:4px; width:450px;" alt="">
+    <img src="{{$place->image_url == null ? asset('admin/assets/images/add-image.png') : $place->image_url}}" id="preview_url" class="mb-4" style="height:300px; border-radius:4px; width:450px;" alt="">
 
     <div class="form-group">
         <label>Descripción</label>

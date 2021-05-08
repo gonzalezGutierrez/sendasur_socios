@@ -51,9 +51,7 @@
                                     <tr>
                                         <td>{{$place->name}}</td>
                                         <td>{{$place->type}}</td>
-                                        <td class="no-print">
-
-                                        </td>
+                                        <td><a href="{{asset('admin/centros_ecoturisticos/'.$place->slug.'/edit')}}" class="btn btn-outline-primary btn-sm"><i class="fa fa-edit"></i>Editar</a></td>
                                     </tr>
                                 @endforeach
                             </tbody>

@@ -82,7 +82,7 @@
 											<div class="row justify-content-md-center">
 												<div>
 													<button type="submit" class="site-btn">RESERVAR <i class="fa fa-envelope"></i></button>
-													<button type="submit" class="site-btn" style="background-color:rgb(52, 135, 43)">RESERVAR POR WHATSAPP <i class="fa fa-whatsapp"></i></button>
+													<a href="https://wa.me/9671019387?text=Hola quiero hacer una reservación en {{$place->name}} , link={{asset('/').'lugar/'.$place->slug}}" target="_blank" class="site-btn btn-whatsapp" style="background-color:rgb(52, 135, 43)">RESERVAR POR WHATSAPP <i class="fa fa-whatsapp"></i></a>
 												</div>
 											</div>
 										</div>

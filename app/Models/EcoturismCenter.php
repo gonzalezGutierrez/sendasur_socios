@@ -15,7 +15,7 @@ class EcoturismCenter extends Model
 
     protected $fillable = [];
 
-    private $fields_list = ['id','slug','name','type','image_url','is_active','created_at','description'];
+    private $fields_list = ['id','slug','name','type','image_url','is_active','created_at','description','services','activities'];
 
     private $fields_detail = [
         'name',
@@ -24,7 +24,9 @@ class EcoturismCenter extends Model
         'description',
         'description_large',
         'ubication',
-        'activities'
+        'type',
+        'activities',
+        'services'
     ];
 
     public function setSlugAttribute($name)

@@ -55,7 +55,7 @@
                     </div>
                     <div class="service-content">
                         <h4>Hospedaje</h4>
-                        <p>Hemos seleccionado cuidadosamente los hoteles y centros ecoturísticos sustentables que
+                        <p class="text-justify">Hemos seleccionado cuidadosamente los hoteles y centros ecoturísticos sustentables que
                             trabajan en pro de la conservación del medio ambiente.</p>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                     </div>
                     <div class="service-content">
                         <h4>Alimentos</h4>
-                        <p>Todos nuestros paquetes, pueden incluir todos los alimentos o
+                        <p class="text-justify">Todos nuestros paquetes, pueden incluir todos los alimentos o
                             pueden ser sin comida, dependiendo lo que el cliente desea que incluya en su paquete.</p>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                     </div>
                     <div class="service-content">
                         <h4>Tours</h4>
-                        <p>Para ofrecer un mejor servicio y apoyar a la economía local, contratamos a guías comunitarios en
+                        <p class="text-justify">Para ofrecer un mejor servicio y apoyar a la economía local, contratamos a guías comunitarios en
                             cada lugar turístico que visitamos y en las zonas arqueológicas.</p>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                     </div>
                     <div class="service-content">
                         <h4>Actividades recreativas</h4>
-                        <p>Podrás visitar el Estado de Chiapas de una manera más auténtica y
+                        <p class="text-justify">Podrás visitar el Estado de Chiapas de una manera más auténtica y
                             mágica, sin prisas, sin presiones, sin itinerarios apretados.</p>
                     </div>
                 </div>
@@ -95,7 +95,7 @@
                     </div>
                     <div class="service-content">
                         <h4>Actividades en la selva</h4>
-                        <p> En estos asombrosos lugares puedes realizar turismo de aventura y ecoturismo, podrás nadar en cascadas, senderismo, hacer rafting, andar en bicicleta de montaña, acampar y hacer caminatas en caminos en medio de la selva. </p>
+                        <p class="text-justify"> En estos asombrosos lugares puedes realizar turismo de aventura y ecoturismo, podrás nadar en cascadas, senderismo, hacer rafting. </p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 service-item">
@@ -104,7 +104,7 @@
                     </div>
                     <div class="service-content">
                         <h4>Excursiones </h4>
-                        <p> Uno de los mejores momentos para interactuar y conocer turistas de todo el mundo en los tours y excursiones.</p>
+                        <p class="text-justify"> Uno de los mejores momentos para interactuar y conocer turistas de todo el mundo en los tours y excursiones.</p>
                     </div>
                 </div>
             </div>
@@ -266,8 +266,8 @@
         </div>
         <div class="gallery">
             <div class="grid-sizer"></div>
-            <div class="gallery-item gi-big set-bg" data-setbg="{{asset('web/img/gallery/1.jpg')}}">
-                <a class="img-popup" href="{{asset('web/img/gallery/1.jpg')}}"><i class="ti-plus"></i></a>
+            <div class="gallery-item gi-big set-bg" data-setbg="{{asset('web/img/gallery/1.jpeg')}}">
+                <a class="img-popup" href="{{asset('web/img/gallery/1.jpeg')}}"><i class="ti-plus"></i></a>
             </div>
             <div class="gallery-item set-bg" data-setbg="{{asset('web/img/gallery/2.jpg')}}">
                 <a class="img-popup" href="{{asset('web/img/gallery/2.jpg')}}"><i class="ti-plus"></i></a>

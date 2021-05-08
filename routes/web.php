@@ -24,3 +24,5 @@ Route::get('servicios',[\App\Http\Controllers\HomeController::class,'services'])
 Route::get('admin/centros_ecoturisticos',[\App\Http\Controllers\EcoturismCenterController::class,'index']);
 Route::get('admin/centros_ecoturisticos/create',[\App\Http\Controllers\EcoturismCenterController::class,'create']);
 Route::post('admin/centros_ecoturisticos/',[\App\Http\Controllers\EcoturismCenterController::class,'store']);
+Route::get('admin/centros_ecoturisticos/{slug}/edit',[\App\Http\Controllers\EcoturismCenterController::class,'edit']);
+Route::put('admin/centros_ecoturisticos/{slug}',[\App\Http\Controllers\EcoturismCenterController::class,'update']);

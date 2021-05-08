@@ -46,9 +46,11 @@ class EcoturismCenterController extends Controller
         return view('admin.ecotourism_centers.create',compact('place'));
     }
 
-    public function edit($slug,$type)
+    public function edit($slug)
     {
-
+       $place = $this->model = $this->findResource($slug);
+       
+       return view('admin.ecotourism_centers.edit',compact('place'));
     }
 
     public function show($slug)
@@ -77,10 +79,10 @@ class EcoturismCenterController extends Controller
 
     }
 
-    public function update(EcoturismCentersRequest $request , $slug,$type)
+    public function update(EcoturismCentersRequest $request , $slug)
     {
-
-        $this->model                    = $this->findResource($slug);
+        
+        $this->model                    = $this->model->where('slug',$slug)->firstOrFail();
 
         $this->model->name              = $request->name;
         $this->model->slug              = $request->name;
@@ -91,11 +93,10 @@ class EcoturismCenterController extends Controller
         $this->model->is_active         = $request->is_active;
         $this->model->services          = $request->services;
         $this->model->activities        = $request->activities;
-        $this->model->type              = $request->type;
-
+        
         $this->model->save();
 
-        return redirect("secure/{$type}")->with('status_success','Centro ecoturistico fue actualizado correctamente');
+        return redirect("admin/centros_ecoturisticos")->with('status_success','Centro ecoturistico fue actualizado correctamente');
     
     }
 
