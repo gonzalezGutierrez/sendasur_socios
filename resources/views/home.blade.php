@@ -84,8 +84,8 @@
                         <img src="{{asset('web/img/services-icons/026-ship.png')}}" alt="1">
                     </div>
                     <div class="service-content">
-                        <h4>Actividades emocionantes</h4>
-                        <p>podrás visitar el Estado de Chiapas de una manera más auténtica y
+                        <h4>Actividades recreativas</h4>
+                        <p>Podrás visitar el Estado de Chiapas de una manera más auténtica y
                             mágica, sin prisas, sin presiones, sin itinerarios apretados.</p>
                     </div>
                 </div>

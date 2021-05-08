@@ -19,6 +19,7 @@ Route::post('contacto',[\App\Http\Controllers\HomeController::class,'contact_mes
 Route::post('contacto/{place_slug}',[\App\Http\Controllers\HomeController::class,'contact']);
 
 Route::get('nosotros',[\App\Http\Controllers\HomeController::class,'about']);
+Route::get('servicios',[\App\Http\Controllers\HomeController::class,'services']);
 
 Route::get('admin/centros_ecoturisticos',[\App\Http\Controllers\EcoturismCenterController::class,'index']);
 Route::get('admin/centros_ecoturisticos/create',[\App\Http\Controllers\EcoturismCenterController::class,'create']);
