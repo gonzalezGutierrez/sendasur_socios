@@ -95,8 +95,7 @@
                     </div>
                     <div class="service-content">
                         <h4>Actividades en la selva</h4>
-                        <p>podrás visitar el Estado de Chiapas de una manera más auténtica y
-                            mágica, sin prisas, sin presiones, sin itinerarios apretados.</p>
+                        <p> En estos asombrosos lugares puedes realizar turismo de aventura y ecoturismo, podrás nadar en cascadas, senderismo, hacer rafting, andar en bicicleta de montaña, acampar y hacer caminatas en caminos en medio de la selva. </p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 service-item">
@@ -105,8 +104,7 @@
                     </div>
                     <div class="service-content">
                         <h4>Excursiones </h4>
-                        <p>podrás visitar el Estado de Chiapas de una manera más auténtica y
-                            mágica, sin prisas, sin presiones, sin itinerarios apretados.</p>
+                        <p> Uno de los mejores momentos para interactuar y conocer turistas de todo el mundo en los tours y excursiones.</p>
                     </div>
                 </div>
             </div>
