@@ -79,7 +79,12 @@
 										</div>
 										<div class="col-sm-12">
                                             {!! Form::textarea('message','',['placeholder'=>'Tus observaciones']) !!}
-											<button type="submit" class="site-btn">RESERVAR</button>
+											<div class="row justify-content-md-center">
+												<div>
+													<button type="submit" class="site-btn">RESERVAR <i class="fa fa-envelope"></i></button>
+													<button type="submit" class="site-btn" style="background-color:rgb(52, 135, 43)">RESERVAR POR WHATSAPP <i class="fa fa-whatsapp"></i></button>
+												</div>
+											</div>
 										</div>
 									</div>
 								</form>

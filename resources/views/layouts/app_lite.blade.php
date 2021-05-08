@@ -62,12 +62,12 @@
             </div>
             <div class="header-info">
                 <div class="hf-item">
-                    <i class="fa fa-clock-o"></i>
-                    <p><span>Working time:</span>Monday - Friday: 08 AM - 06 PM</p>
+                    <i class="fa fa-phone"></i>
+                    <p><span>Tel:</span> (967) 101 9387</p>
                 </div>
                 <div class="hf-item">
                     <i class="fa fa-map-marker"></i>
-                    <p><span>Find us:</span>40 Baria Street 133/2, New York City, US</p>
+                    <p><span>Encuéntranos en:</span>San Cristobal de las Casas Chiapas México CP.29230</p>
                 </div>
             </div>
         </div>
@@ -574,67 +574,63 @@
                 <!-- widget -->
                 <div class="col-sm-6 col-lg-3 footer-widget">
                     <div class="about-widget">
-                        <img src="{{asset('web/img/logo-light.png')}}" alt="">
-                        <p>orem ipsum dolor sit amet, consecter adipiscing elite. Donec minos varius, viverra justo ut, aliquet nisl.</p>
+                        <img src="{{asset('logo.png')}}" alt="">
+                        <p>Sendasur está conformada por 11 centros ecoturísticos comunitarios y una transportadora turística.</p>
                         <div class="social pt-1">
-                            <a href=""><i class="fa fa-twitter-square"></i></a>
-                            <a href=""><i class="fa fa-facebook-square"></i></a>
-                            <a href=""><i class="fa fa-google-plus-square"></i></a>
-                            <a href=""><i class="fa fa-linkedin-square"></i></a>
-                            <a href=""><i class="fa fa-rss-square"></i></a>
+                            <a href="https://www.facebook.com/SendaSur.Chiapas"><i class="fa fa-facebook-square"></i></a>
+                            <a href="https://www.instagram.com/sendasur_chiapas/"><i class="fa fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
                 <!-- widget -->
                 <div class="col-sm-6 col-lg-3 footer-widget">
-                    <h6 class="fw-title">USEFUL LINK</h6>
+                    <h6 class="fw-title">ENLACES</h6>
                     <div class="dobule-link">
                         <ul>
-                            <li><a href="">Home</a></li>
-                            <li><a href="">About us</a></li>
-                            <li><a href="">Services</a></li>
-                            <li><a href="">Events</a></li>
-                            <li><a href="">Features</a></li>
+                            <li><a href="{{asset('/')}}">Inicio</a></li>
+                            <li><a href="{{asset('/nosotros')}}">Nosotros</a></li>
+                            <li><a href="{{asset('/servicios')}}">Servicios</a></li>
                         </ul>
                         <ul>
-                            <li><a href="">Policy</a></li>
-                            <li><a href="">Term</a></li>
-                            <li><a href="">Help</a></li>
-                            <li><a href="">FAQs</a></li>
-                            <li><a href="">Site map</a></li>
+                            <li><a href="{{asset('/centros_ecoturisticos')}}">Centros Ecoturísticos</a></li>
+                            <li><a href="{{asset('/socios')}}">Socios</a></li>
+                            <li><a href="{{asset('/contacto')}}">Contacto</a></li>
                         </ul>
                     </div>
                 </div>
                 <!-- widget -->
                 <div class="col-sm-6 col-lg-3 footer-widget">
-                    <h6 class="fw-title">RECENT POST</h6>
+                    <h6 class="fw-title">CENTROS ECOTURÍSTICOS</h6>
                     <ul class="recent-post">
                         <li>
-                            <p>Snackable study:How to break <br> up your master's degree</p>
-                            <span><i class="fa fa-clock-o"></i>24 Mar 2018</span>
+                            <p>Localidad Lacanjá Chansayab</p>
                         </li>
                         <li>
-                            <p>Open University plans major <br> cuts to number of staff</p>
-                            <span><i class="fa fa-clock-o"></i>24 Mar 2018</span>
+                            <p>Localidad Nueva Palestina</p>
                         </li>
+                        <li>
+                            <p>Localidad Frontera Corozal</p>
+                        </li>
+                        <li><a href="{{asset('/centros_ecoturisticos')}}" class="text-light">Ver más</a></li>
                     </ul>
                 </div>
                 <!-- widget -->
                 <div class="col-sm-6 col-lg-3 footer-widget">
-                    <h6 class="fw-title">CONTACT</h6>
+                    <h6 class="fw-title">CONTACTO</h6>
                     <ul class="contact">
-                        <li><p><i class="fa fa-map-marker"></i> 40 Baria Street 133/2, NewYork City,US</p></li>
-                        <li><p><i class="fa fa-phone"></i> (+88) 111 555 666</p></li>
-                        <li><p><i class="fa fa-envelope"></i> infodeercreative@gmail.com</p></li>
-                        <li><p><i class="fa fa-clock-o"></i> Monday - Friday, 08:00AM - 06:00 PM</p></li>
+                        <li><p><i class="fa fa-map-marker"></i> Av. Almolonga 28 A Entre la Francisco León y Rubón Ramos Barrio de Santa Lucia C.p 29250 San Cristobal de las Casas, Chiapas.</p></li>
+                        <li><p><i class="fa fa-phone"></i> (967) 101 9387 </p></li>
+                        <li><p><i class="fa fa-envelope"></i> contacto@sendasur.org</p></li>
+                        <li><p><i class="fa fa-clock-o"></i> Lunes - Sabado: 09 AM - 02 PM y 4:00pm - 8:00PM
+                        </p></li>
                     </ul>
                 </div>
             </div>
         </div>
         <!-- copyright -->
         <div class="copyright">
-            <div class="container">
-
+            <div class="container text-light">
+                Copyright © 2021 SendaSur
             </div>
         </div>
     </footer>

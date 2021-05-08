@@ -58,9 +58,10 @@
                         <div class="col-lg-12">
                             {!! Form::textarea('message','',['placeholder'=>'Mensaje','required']) !!}
                             <div class="text-center">
-                                <button type="submit" class="site-btn">ENVÍAR</button>
+                            <button type="submit" class="site-btn">ENVÍAR</button>
                             </div>
-                        </div>
+                        </div>                        
+                    </div>
                     </div>
                 </form>
             </div>

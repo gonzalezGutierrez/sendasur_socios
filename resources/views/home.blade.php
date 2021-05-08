@@ -259,7 +259,7 @@
 
     <div class="gallery-section">
         <div class="section-title text-center container">
-            <h3>Conoce lo mejor de Chíapas</h3>
+            <h3>Conoce lo mejor de Chiapas</h3>
             <p>
                 Por primera vez en el Estado, comunidades de distintos orígenes étnicos suman sus fuerzas para
                 lograr una representatividad del ecoturismo en Chiapas. Con esta iniciativa se busca poner en
@@ -300,14 +300,14 @@
             <div class="row">
                 <div class="col-md-5 col-lg-7">
                     <div class="section-title mb-md-0">
-                    <h3>NEWSLETTER</h3>
-                    <p>Subscribe and get the latest news and useful tips, advice and best offer.</p>
+                    <h3>BOLETÍN INFORMATIVO</h3>
+                    <p>Suscríbase y obtenga las últimas noticias sobre SendaSur</p>
                 </div>
                 </div>
                 <div class="col-md-7 col-lg-5">
                     <form class="newsletter">
-                        <input type="text" placeholder="Enter your email">
-                        <button class="site-btn">SUBSCRIBE</button>
+                        <input type="text" placeholder="Escribe tu email">
+                        <button class="site-btn">SUSCRÍBETE</button>
                     </form>
                 </div>
             </div>
