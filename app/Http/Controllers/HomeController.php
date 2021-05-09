@@ -24,7 +24,11 @@ class HomeController extends Controller
     {
         $partners = $this->ecoturismCenter->takeByType($type='socio',$take=6);
         $ecoturismCenters = $this->ecoturismCenter->takeByType($type='colaborador',$take=6);
-        return view('home',compact('partners','ecoturismCenters','ecoturismCenters'));
+
+        $partnersCount = $this->ecoturismCenter->where('type','socio')->count();
+        $ecoturismCentersCount = $this->ecoturismCenter->where('type','colaborador')->count();
+
+        return view('home',compact('partners','ecoturismCenters','ecoturismCenters','partnersCount','ecoturismCentersCount'));
     }
 
     public function partners()

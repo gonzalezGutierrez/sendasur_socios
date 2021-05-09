@@ -166,7 +166,9 @@
                         <div class="course-thumb">
                             <img src="{{$partner->image_url}}" alt="">
                             <div class="course-cat">
-                                <span>SOCIOS</span>
+                                <a href="{{asset('lugar/'.$partner->slug)}}">
+                                    <span><i class="fa fa-book"></i> Reservar</span>
+                                </a>
                             </div>
                         </div>
                         <div class="course-info">
@@ -198,7 +200,7 @@
                         <i class="ti-medall"></i>
                     </div>
                     <div class="fact-text">
-                        <h2>{{$ecoturismCenters->count()}}+</h2>
+                        <h2>{{$ecoturismCentersCount}}+</h2>
                         <p>Centros ecoturisticos</p>
                     </div>
                 </div>
@@ -207,7 +209,7 @@
                         <i class="ti-medall"></i>
                     </div>
                     <div class="fact-text">
-                        <h2>{{$partners->count()}}+</h2>
+                        <h2>{{$partnersCount}}+</h2>
                         <p>Socios</p>
                     </div>
                 </div>
